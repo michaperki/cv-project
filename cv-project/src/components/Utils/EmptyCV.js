@@ -5,6 +5,12 @@ const emptyCV = {
         title: "",
         email: "",
     },
+    education: {
+        school: ""
+    },
+    experience: {
+        job: ""
+    },
 }
 
 export default emptyCV;

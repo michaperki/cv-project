@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import CVHeader from "./Header";
+import Content from "./Content";
 import Sidebar from "./Sidebar";
 
 class CVPreview extends Component {
@@ -9,6 +10,7 @@ class CVPreview extends Component {
     return (
       <CVPreviewWrapper>
         <CVHeader personalInfo={cv.personalInfo} />
+        <Content education={cv.education} experience={cv.experience} />
         <Sidebar email={cv.personalInfo.email} />
       </CVPreviewWrapper>
     );

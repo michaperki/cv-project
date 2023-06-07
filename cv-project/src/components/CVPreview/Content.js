@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Content = ({ education, experience }) => {
   return (
     <ContentWrapper>
-      {education} {experience}
+      {education.school} {experience.job}
     </ContentWrapper>
   );
 };
