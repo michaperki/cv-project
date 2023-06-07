@@ -2,6 +2,7 @@ const emptyCV = {
     personalInfo: {
         firstName: "",
         lastName: "",
+        title: "",
         email: "",
     },
 }

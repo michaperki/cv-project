@@ -1,15 +1,30 @@
 import React from "react";
 import Input from "../Utils/Input";
+import Section from "../Utils/Section";
 
 const Personal = ({ personalInfo, onChange }) => {
   return (
-    <>
+    <Section title="Personal Info" direction="column">
       <Input
-        name="name"
-        value={personalInfo.name}
+        name="firstName"
+        value={personalInfo.firstName}
         onChange={(e) => onChange(e)}
         type="text"
-        placeholder="name"
+        placeholder="first name"
+      />
+      <Input
+        name="lastName"
+        value={personalInfo.lastName}
+        onChange={(e) => onChange(e)}
+        type="text"
+        placeholder="last name"
+      />
+      <Input
+        name="title"
+        value={personalInfo.title}
+        onChange={(e) => onChange(e)}
+        type="text"
+        placeholder="title"
       />
       <Input
         name="email"
@@ -18,7 +33,7 @@ const Personal = ({ personalInfo, onChange }) => {
         type="text"
         placeholder="email"
       />
-    </>
+    </Section>
   );
 };
 

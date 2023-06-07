@@ -1,13 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 
-const Header = ({ personalInfo }) => {
-  const { name, email } = personalInfo;
+const CVHeader = ({ personalInfo }) => {
+  const { firstName, lastName, title } = personalInfo;
   return (
-    <>
-      {name} {email}
-    </>
+    <CVHeaderWrapper>
+      <h1>
+        {firstName} {lastName}
+      </h1>
+      <p>{title}</p>
+    </CVHeaderWrapper>
   );
 };
 
-export default Header;
+const CVHeaderWrapper = styled.header`
+  grid-column: span 2;
+  background-color: lightgrey;
+  padding: 2rem;
+`;
+
+export default CVHeader;
