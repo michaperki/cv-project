@@ -20,7 +20,7 @@ const Main = () => {
   return (
     <>
       <CVForm cv={cv} onChangePersonal={handleChangePersonal} />
-      <CVPreview />
+      <CVPreview cv={cv}/>
     </>
   );
 };
