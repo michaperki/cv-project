@@ -19,18 +19,18 @@ const Main = () => {
     }));
   };
 
-  const handleChangeEducation = (e) => {
+  const handleChangeEducation = (e, id) => {
     const { name, value } = e.target;
 
-    setCv((prevState) => ({
-      ...prevState,
-      education: [
-        {
-          ...prevState.education,
-          [name]: value,
-        },
-      ],
-    }));
+    setCv((prevState) => {
+      const newEducation = prevState.education.map((educationItem) => {
+        if (educationItem.id === id) {
+          return { ...educationItem, [name]: value };
+        }
+        return educationItem;
+      });
+      return { ...prevState, education: [...newEducation] };
+    });
   };
 
   return (
