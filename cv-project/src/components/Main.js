@@ -11,6 +11,7 @@ const Main = () => {
     const { name, value } = e.target;
 
     setCv((prevState) => ({
+      ...prevState,
       personalInfo: {
         ...prevState.personalInfo,
         [name]: value,
@@ -18,9 +19,27 @@ const Main = () => {
     }));
   };
 
+  const handleChangeEducation = (e) => {
+    const { name, value } = e.target;
+
+    setCv((prevState) => ({
+      ...prevState,
+      education: [
+        {
+          ...prevState.education,
+          [name]: value,
+        },
+      ],
+    }));
+  };
+
   return (
     <MainWrapper>
-      <CVForm cv={cv} onChangePersonal={handleChangePersonal} />
+      <CVForm
+        cv={cv}
+        onChangePersonal={handleChangePersonal}
+        onChangeEducation={handleChangeEducation}
+      />
       <CVPreview cv={cv} />
     </MainWrapper>
   );

@@ -11,7 +11,7 @@ const Section = ({title, children, direction}) => {
 };
 
 const SectionWrapper = styled.section`
-  border: 1px solid red;
+    padding: 2rem;
 `;
 
 const Children = styled.div`

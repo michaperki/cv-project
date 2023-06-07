@@ -1,16 +1,24 @@
+import { v4 as uuidv4 } from "uuid";
+
 const emptyCV = {
-    personalInfo: {
-        firstName: "",
-        lastName: "",
-        title: "",
-        email: "",
+  personalInfo: {
+    firstName: "",
+    lastName: "",
+    title: "",
+    email: "",
+  },
+  education: [
+    {
+      id: uuidv4(),
+      school: "",
     },
-    education: {
-        school: ""
+  ],
+  experience: [
+    {
+      id: uuidv4(),
+      job: "",
     },
-    experience: {
-        job: ""
-    },
-}
+  ],
+};
 
 export default emptyCV;
