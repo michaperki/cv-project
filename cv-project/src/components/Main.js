@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
+import emptyCV from './Utils/EmptyCV';
 
 const Main = () => {
-    return <>Hello World!</>
+    const [cv, setCv] = useState(emptyCV);
 }
 
 export default Main;
