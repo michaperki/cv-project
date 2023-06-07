@@ -14,7 +14,6 @@ const Input = ({ name, value, onChange, type, placeholder }) => {
 };
 
 const InputWrapper = styled.input`
-  border: 1px solid red;
 `;
 
 export default Input;
